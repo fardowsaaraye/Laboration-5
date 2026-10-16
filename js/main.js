@@ -80,10 +80,24 @@ function displayErrors() {
  */
 function createStudentCard() {
     // Hämta information från formuläret
-
+     const studentCard = {
+        name: fullnameInput.value,
+        email: emailInput.value,
+        phone: phoneInput.value,
+        font: fontSelect.value,
+        };
     // Uppdatera studentkortet
+    previewFullname.textContent = "Namn" + studentCard.name;
+    previewEmail.textContent = "E-post" + studentCard.email;
+    previewPhone.textContent = "Telefon" + studentCard.phone;
 
+    // Uppdatera typsnittet på studentkortet 
+    previewFullname.style.fontFamily = studentCard.font;
+    previewEmail.style.fontFamily = studentCard.font;
+    previewPhone.style.fontFamily = studentCard.font;
+    
     // Lägg till studentkortet i historiken
+
 
     // Spara och uppdatera historiken
 }
