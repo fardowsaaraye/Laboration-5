@@ -87,9 +87,9 @@ function createStudentCard() {
         font: fontSelect.value,
         };
     // Uppdatera studentkortet
-    previewFullname.textContent = "Namn" + studentCard.name;
-    previewEmail.textContent = "E-post" + studentCard.email;
-    previewPhone.textContent = "Telefon" + studentCard.phone;
+    previewFullname.textContent = studentCard.name;
+    previewEmail.textContent = studentCard.email;
+    previewPhone.textContent = studentCard.phone;
 
     // Uppdatera typsnittet på studentkortet 
     previewFullname.style.fontFamily = studentCard.font;
