@@ -208,3 +208,4 @@ deleteHistoryButton.addEventListener("click", deleteHistory);
 
 // När sidan laddas:
 // - läs in och visa eventuell tidigare historik
+window.addEventListener("load",loadHistory);
