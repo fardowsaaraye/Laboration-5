@@ -141,15 +141,17 @@ function renderHistory() {
      const name = document.createElement("p");
      const email = document.createElement("p");
      const phone = document.createElement("p");
+     const font = document.createElement("p");
 
      name.textContent = studentCard.name;
      email.textContent = studentCard.email;
      phone.textContent = studentCard.phone;
-
+     font.textContent = studentCard.font
 
      article.appendChild(name);
      article.appendChild(email);
      article.appendChild(phone);
+     article.appendChild(font);
      historySection.appendChild(article);
     });
 
@@ -162,7 +164,9 @@ function renderHistory() {
  */
 function clearForm() {
     // Återställ formulär och studentkort
+    form.reset();
 
+    previewFullname.textContent = ""; 
     // Rensa eventuella felmeddelanden
 }
 
