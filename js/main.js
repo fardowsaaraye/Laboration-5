@@ -100,6 +100,7 @@ function createStudentCard() {
     history.unshift(studentCard);
    // Spara och uppdatera historiken
    saveHistory();
+   
 }
 
 
@@ -118,8 +119,12 @@ function saveHistory() {
  */
 function loadHistory() {
     // Hämta eventuell sparad historik
-    
+    const savedHistory = localStorage.getItem("history");
+    if (savedHistory) { 
+        history = JSON.parse(savedHistory);
+        }
     // Uppdatera history
+    renderHistory();
 }
 
 
