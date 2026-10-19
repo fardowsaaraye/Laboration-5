@@ -166,8 +166,11 @@ function clearForm() {
     // Återställ formulär och studentkort
     form.reset();
 
-    previewFullname.textContent = ""; 
+    previewFullname.textContent =""; 
+    previewEmail.textContent ="";
+    previewPhone.textContent ="";
     // Rensa eventuella felmeddelanden
+    errorList.innerHTML ="";
 }
 
 
@@ -196,7 +199,7 @@ function deleteHistory() {
     });
 
 // När användaren klickar på "Rensa"
-    
+clearButton.addEventListener("click",clearForm); 
 
 // När användaren klickar på "Radera historik"
 
